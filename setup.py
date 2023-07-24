@@ -28,7 +28,7 @@ def get_install_requires():
     res.append('boto3>=1.17.57')
     res.append('requests_aws4auth>=1.0.1')
     res.append('click>=7.0,<8.0')
-    res.append('pyyaml==5.4.1')
+    res.append('pyyaml==5.3.1')
     res.append('voluptuous>=0.12.1')
     res.append('certifi>=2020.12.5')
     res.append('six>=1.15.0')
@@ -67,7 +67,7 @@ try:
         base=base,
         targetName = "es_repo_mgr",
     )
-    build_dict = { 
+    build_dict = {
         "build_exe": dict(
             packages = [],
             excludes = [],
@@ -95,10 +95,10 @@ try:
         )
 
         msvcrt = 'vcruntime140.dll'
-        build_dict = { 
+        build_dict = {
             "build_exe": {
                 "include_files": [cert_file, msvcrt],
-                "include_msvcr": True, 
+                "include_msvcr": True,
                 "silent": True,
             },
             "bdist_msi": {
